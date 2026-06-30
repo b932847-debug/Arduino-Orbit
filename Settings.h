@@ -1,0 +1,12 @@
+#pragma once
+#include <Arduino.h>
+void Settings_begin();
+void Settings_load();
+void Settings_save();
+void Settings_factoryReset();
+uint8_t Settings_getVolume();
+void Settings_setVolume(uint8_t);
+uint8_t Settings_getBrightness();
+void Settings_setBrightness(uint8_t);
+bool Settings_wakeWordEnabled();
+void Settings_enableWakeWord(bool);
