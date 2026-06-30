@@ -7,21 +7,16 @@
 #include "Personality.h"
 #include "AudioEngine.h"
 #include "Speech.h"
+
 #include "WakeWord.h"
-#include "Display.h"
-#include "OrbRenderer.h"
-#include "WaveRenderer.h"
-#include "ChatRenderer.h"
-#include "HomeScreen.h"
-#include "SettingsScreen.h"
-#include "StatusBar.h"
-#include "Notifications.h"
-#include "Cellular.h"
+
+
+
 #include "Battery.h"
 #include "WiFiManager.h"
 #include "OTA.h"
-#include "Sensors.h"
-#include "Touch.h"
+
+
 #include "OrbitFace.h"
 #include "OrbitFX.h"
 #include <WiFi.h>
@@ -271,7 +266,7 @@ void handleCommand(String cmd) {
 
     reply(answer);
 
-    Sound_play(SOUND_NOTIFY);
+   
 
     Event_emit(EVT_AI_RESPONSE);
 
@@ -280,8 +275,11 @@ void handleCommand(String cmd) {
 
     // Future:
     // TTS_speak(answer);
+
 }
-tft.print("_");
+
+
+
 void setup(){
   Serial.begin(115200);
 // initDisplay(); // replaced by Display_begin();
@@ -307,7 +305,7 @@ System_begin();
 Scheduler_begin();
 Audio_begin(); 
 TTS_begin();
-Sound_play(SOUND_BOOT);
+
 
 }
 
@@ -353,4 +351,3 @@ System_update(); Scheduler_update();
 System_setState(STATE_IDLE);
 // TTS_speak(answer);
 }
-
