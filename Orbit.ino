@@ -7,7 +7,6 @@
 #include "Personality.h"
 #include "AudioEngine.h"
 #include "Speech.h"
-#include "TTS.h"
 #include "WakeWord.h"
 #include "Display.h"
 #include "OrbRenderer.h"
